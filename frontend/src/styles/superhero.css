@@ -1,0 +1,22 @@
+@import url("./main.css");
+
+.SuperheroSection {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.SuperheroInfoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.SuperheroSectionImage {
+    height: 100%;
+}
+
+.SuperheroText {
+    font-size: 2rem;
+}

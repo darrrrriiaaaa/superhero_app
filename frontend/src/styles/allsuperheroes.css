@@ -1,0 +1,27 @@
+@import url("./main.css");
+
+.SuperheroesSection {
+    width: 100%;
+    height: 50vh;
+    overflow-x: scroll;
+    columns: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.SuperheroCard {
+    height: 40vh;
+    width: 40vw;
+    background-color: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.SuperheroCardImage {
+    height: 60%;
+}
