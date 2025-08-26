@@ -1,27 +1,59 @@
 @import url("./main.css");
 
 .SuperheroesSection {
+    position: relative;
     width: 100%;
     height: 50vh;
-    overflow-x: scroll;
-    columns: 5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    margin-bottom: 1rem;
 }
 
 .SuperheroCard {
-    height: 40vh;
-    width: 40vw;
+    height: 50vh;
+    width: 15vw;
+    min-width: max-content;
+    max-width: 17vw;
+    padding: 2rem 1rem;
     background-color: var(--card-bg-color);
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.SuperheroCardButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .SuperheroCardImage {
-    height: 60%;
+    height: 80%;
+    max-width: 15vw;
+    object-fit: contain;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.SuperheroCardNickname {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+.slick-prev {
+    left: 1% !important;
+}
+
+.slick-next {
+    right: 1% !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 50px;
 }

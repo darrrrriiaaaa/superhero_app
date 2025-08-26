@@ -49,13 +49,14 @@ const SuperheroForm = ({ superheroId, initialValues = {}, onSuccess, onClose }) 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const payload = {};
-        if (nickname) payload.nickname = nickname;
-        if (realName) payload.real_name = realName;
-        if (originDescription) payload.origin_description = originDescription;
-        if (superpowers) payload.superpowers = superpowers;
-        if (catchPhrase) payload.catch_phrase = catchPhrase;
-        if (images.length > 0) payload.images = images;
+        const payload = {
+            nickname,
+            real_name: realName,
+            origin_description: originDescription,
+            superpowers,
+            catch_phrase: catchPhrase,
+            images
+        };
 
         try {
             const url = editMode ? `http://localhost:5000/superheroes/${superheroId}` : "http://localhost:5000/superheroes/";
@@ -123,7 +124,7 @@ const SuperheroForm = ({ superheroId, initialValues = {}, onSuccess, onClose }) 
                 />
                 <input type="file" multiple accept="image/*" onChange=  {handleImageLoad} className="InputElement"/>
                 {images.length > 0 && (
-                    <div>
+                    <div className="InputImagesSection InputElement">
                         {images.map((img, index) => (
                             <section key={index}>
                                 <img src={img} alt={`${nickname}`} className="InputImage" />

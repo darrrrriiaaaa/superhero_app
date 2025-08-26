@@ -111,4 +111,19 @@ superheroRouter.put("/:superheroId", async (req, res) => {
     };
 });
 
+// route to delete specific superhero
+superheroRouter.delete("/:superheroId", async (req, res) => {
+    try {
+        const { superheroId } = req.params;
+        const superhero = await Superhero.findByIdAndDelete(superheroId);
+        if (!superhero) {
+            return res.status(404).json({ message: "Superhero not found" });
+        };
+        res.json({ message: "Superhero deleted successfully!" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Server error" });
+    };
+});
+
 export default superheroRouter;

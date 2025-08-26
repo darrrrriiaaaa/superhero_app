@@ -11,9 +11,9 @@ const Header = () => {
         <div className="HeaderSection">
             <img src={marvel_horizontal_picture} alt="Superheroes" className="HeaderSectionImage" />
             <section className="HeaderSectionMenu">
-                <NavLink to="/" className="HeaderText">Home</NavLink>
-                <NavLink to="/superheroes" className="HeaderText">Superheroes</NavLink>
-                <NavLink to="/about" className="HeaderText">About</NavLink>
+                <NavLink to="/" className="HeaderText HeaderMenuText">Home</NavLink>
+                <NavLink to="/superheroes" className="HeaderText HeaderMenuText">Superheroes</NavLink>
+                <NavLink to="/about" className="HeaderText HeaderMenuText">About</NavLink>
             </section>
         </div>
     )

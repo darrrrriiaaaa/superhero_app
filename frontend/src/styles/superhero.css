@@ -1,22 +1,48 @@
 @import url("./main.css");
 
 .SuperheroSection {
-    height: 60vh;
+    height: 70vh;
+    min-height: max-content;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .SuperheroInfoSection {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
 }
 
-.SuperheroSectionImage {
+.SuperheroImagesSection {
+    height: inherit;
+    width: 40%;
+}
+
+.SuperheroMainImage {
     height: 100%;
+    max-height: max-content;
+    margin: 0 50%;
+    transform: translateX(-50%);
+}
+
+.SuperheroCarouselImage {
+    height: 100px;
+    object-fit: contain;
+    margin: 0 5px;
 }
 
 .SuperheroText {
     font-size: 2rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.SuperheroButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
